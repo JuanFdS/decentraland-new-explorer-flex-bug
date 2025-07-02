@@ -19,7 +19,7 @@ export function showUi() {
     // The workaround that makes it work is:
     // Instead of using something like `isVisible && Component`, have a display field inside Component's uiTransform set to: `isVisible ? 'flex' : 'none'`
     <UiEntity uiTransform={{ width: '100%', height: '50%', flexDirection: 'column' }}>
-        <Button uiTransform={{ width: '50%', height: '50%' }} value="CLICK ME (bool && <component/>) --- This should be on the TOP" onMouseDown={() => { isVisibleFlexContainer = !isVisibleFlexContainer }} />
+        <Button uiTransform={{ width: '50%', height: '50%' }} value="CLICK ME (display: boolean ? 'flex' : 'none') --- This should be on the TOP" onMouseDown={() => { isVisibleFlexContainer = !isVisibleFlexContainer }} />
         <UiEntity  uiTransform={{ display: isVisibleFlexContainer ? 'flex' : 'none' , flexDirection: 'row', width: '50%', height: '50%' }}>
             <UiEntity uiText={{value: "This should be on the LEFT"}} uiBackground={{ color: Color4.Black() }} uiTransform={{ width: '100%', height: '100%' }} />
             <UiEntity uiText={{value: "This should be on the RIGHT"}} uiBackground={{ color: Color4.Red() }} uiTransform={{ width: '100%', height: '100%' }} />
