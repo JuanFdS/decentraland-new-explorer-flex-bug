@@ -4,13 +4,13 @@ When creating UI components with the sdk7, if I use a component that orders its 
 
 This only seems to happen when the component is hidden by writing it in the style:
 
-```react
+```javascript
 {isVisible && <Component/>}
 ```
 
 However, it doesn't happen if the component is written like this:
 
-```react
+```javascript
 {<Component uiTransform={{display: isVisible ? 'flex' : 'none'}}}
 ```
 
