@@ -1,4 +1,4 @@
-# Readme
+# Decentraland - New Explorer - Sdk7 - Bug: UI components children get reordered on redraw
 
 When creating UI components with the sdk7, if I use a component that orders its children using as its display type 'flex', whenever the component is hidden and then shown again, the children are reordered.
 
